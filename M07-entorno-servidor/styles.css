@@ -1,0 +1,13 @@
+body {
+    background-color: #445544;
+}
+.border-3 {
+    border-style: solid;
+    border-width: 3px !important;
+    border-radius: 25px;
+}
+.titulo{
+    height: 80px;
+    margin: 30px;
+    background-color: aqua;
+}
