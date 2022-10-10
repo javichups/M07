@@ -1,0 +1,101 @@
+# Crear un repositorio local (en el directorio actual)
+git init
+
+# Crear un repositorio dentro de un nuevo directorio
+# especificando el nombre del proyecto
+git init [nombre del proyecto]
+
+# Copiar un repositorio remoto 
+git clone nombredeusuario@host:/path/to/repository
+
+# Copiar un repositorio local
+git clone /path/to/repository
+
+# Agregar archivos al área de preparación
+git add <ejemplo.txt>
+
+# Crear instantánea de los cambios y guardarlos
+# en el directorio git
+git commit -m "mensaje que acompaña al commit aquí"
+
+# Lista de archivos que se han cambiado
+git status
+
+# Enviar confirmaciones locales a la rama maesta
+# del repositorio remoto.
+git push origin <master>
+
+# Crea ramas y te ayuda a navegar entre ellas. 
+# Por ejemplo, el siguiente comando crea una nueva
+# y automáticamente se cambia a ella
+command git checkout -b <branch-name>
+
+# Ver repositorios remotos
+git remote -v
+
+# Conectar el repositorio local a un servidor remoto
+git remote add origin <host-or-remoteURL>
+
+# Borrar una conexión a un repositorio remoto especificado
+git remote <nombre-del-repositorio>
+
+# Listar, crear o borrar ramas. 
+	# Listar
+	git branch
+	# Borrar una rama
+	git branch -d <branch-name>
+
+# Fusiona todos los cambios que se han hecho en
+# el repositorio remoto con el directorio de trabajo local
+git pull
+
+# Fusionar una rama con otra rama activa
+git merge <branch-name>
+
+# Hacer una lista de conflictos.
+git diff -- base <file-name>
+
+# Ver conflictos entre ramas antes de fusionarlas
+git diff <source-branch> <target-branch>
+
+# Listar todos los conflictos presentes
+git diff
+
+# Marcar commits específicos. Los desarrolladores lo
+# usan para marcar puntos de lanzamiento como v1.0 y v2.0
+git tag 1.1.0 <insert-commitID-here>
+
+# Ver historial del repositorio
+git log
+
+# Resetear el index y el directorio de trabajo al último estado de confirmación
+git reset - hard HEAD
+
+# Remover archivos del index y del directorio de trabajo
+git rm filename.txt
+
+# Mostrar información sobre cualquier objeto git
+git show
+
+# buscar todos los objetos de un repositorio remoto
+# que actualmente no se encuentran en el directorio de trabajo local.
+git fetch origin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,5 +9,7 @@ body {
 .titulo{
     height: 80px;
     margin: 30px;
-    background-color: aqua;
+}
+.tit{
+    text-align: center;
 }
