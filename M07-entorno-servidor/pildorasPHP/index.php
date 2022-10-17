@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
+        <?php
+            require ("datosbbdd.php");
+            new conectarBaseDatos;
+                function realizarConsulta($datos){
+                    
+                    conectar("localhost","prueba","root","");
+                    realizarConsulta($datos);
+                }
+                function borrarbusqueda(){
 
+                }
+        ?>
     </head>
     <body>
+        <h1>Realizar búsqueda</h1>
         <div>
-            <form action="" method="post">
-            <br/><br/><br>  
-                <input type="text" name="num1" id="num1">    
-                <label for="num1"></label>
-                <input type="text" name="num2" id="num2">
-                <label for="num2"></label>
-                <br><br>
-                <select name="operacion" id="operacion">
-                    <option>Suma</option>
-                    <option>Resta</option>
-                    <option>Multiplicacion</option>
-                    <option>Division</option>
-                    <option>Módulo</option>
-                    <option>Incremento</option>
-                    <option>Decremento</option>
-                </select>
-                <br><br>
-                <input type="submit" name="button" id="button" value="Enviar" onclick="prueba">
-                <br><br>
-            </form>
+            <?php
+                @$mibusqueda=$_GET["buscar"];
+                $mipag=$_SERVER["PHP_SELF"];
+                if($mibusqueda!=NULL){
+                    realizarConsulta($mibusqueda);
+                    echo ("<form method='get' action=''>
+                    <button type='submit' name='volver' value='volver'>Volver atrás</button>"
+                    );
+                } else {
+                    echo ("<form method='get' action=''>
+                    <label>Buscar: <input type='text' name='buscar'></label>
+                    <button type='submit' name='enviando' value='Buscar'>Buscar</button>"
+                    );
+                }
+            ?>
         </div>
-        <div>          
-            <?php include "formulario.php" ?>
+        <br>
+        <h1>Añadir registro</h1>
+        <div>
+            
         </div>
+        <br>
     </body>
 </html>
