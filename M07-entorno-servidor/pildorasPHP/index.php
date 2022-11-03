@@ -1,44 +1,25 @@
+<?php
+    require "realizarConsulta.php";
+    //@$mibusqueda=$_GET["buscar"];
+    //$mipag=$_SERVER["PHP_SELF"];
+    $buscarProductos = new realizarConsulta();
+    $array_productos = $buscarProductos->realizarConsulta();
+?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <?php
-            require ("datosbbdd.php");
-            new conectarBaseDatos;
-                function realizarConsulta($datos){
-                    
-                    conectar("localhost","prueba","root","");
-                    realizarConsulta($datos);
-                }
-                function borrarbusqueda(){
-
-                }
-        ?>
-    </head>
-    <body>
-        <h1>Realizar búsqueda</h1>
-        <div>
-            <?php
-                @$mibusqueda=$_GET["buscar"];
-                $mipag=$_SERVER["PHP_SELF"];
-                if($mibusqueda!=NULL){
-                    realizarConsulta($mibusqueda);
-                    echo ("<form method='get' action=''>
-                    <button type='submit' name='volver' value='volver'>Volver atrás</button>"
-                    );
-                } else {
-                    echo ("<form method='get' action=''>
-                    <label>Buscar: <input type='text' name='buscar'></label>
-                    <button type='submit' name='enviando' value='Buscar'>Buscar</button>"
-                    );
-                }
-            ?>
-        </div>
-        <br>
-        <h1>Añadir registro</h1>
-        <div>
-            
-        </div>
-        <br>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+        foreach($array_productos as $elemento)
+        {
+            var_dump($elemento);
+ //var_dump muestra los datos de manera interesante
+        }
+    ?>
+</body>
 </html>
