@@ -1,0 +1,40 @@
+html, body {
+     min-height: 100%;
+}
+body {
+    background-color: #445544;
+}
+.border-3 {
+    border-style: solid;
+    border-width: 3px !important;
+    border-radius: 25px;
+}
+.form{
+    height: 500px;
+    margin: 0px;
+}
+.titulo{
+    height: 80px;
+    margin: 30px;
+}
+.tit{
+    text-align: center;
+}
+.formulario{
+    height: 10px;
+    margin: 30px;
+}
+.logout{
+    text-align: right;
+    padding-right: 9%;
+    padding-top: 2%;
+}
+#user{
+    float: right;
+}
+.errorLogin {
+    font-size: 15px;
+    text-align: center;
+    color: red;
+    padding-bottom: 2%;
+}
